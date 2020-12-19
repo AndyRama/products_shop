@@ -8,6 +8,7 @@
              <div class="card-body">
                <h5 class="card-title"><%= product.name %></h5>
                <p class="card-text"><%= product.category.name %></p>
+               <p>Amount: <%= humanized_money_with_symbol(product.price) %></p>
                <%= link_to "More details", product_path(product), class: "btn btn-primary" %>
                <%= link_to "Add basket", product_path(product), class: "btn btn-primary" %>
              </div>
