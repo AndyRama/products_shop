@@ -1,8 +1,7 @@
-<div class="container mt-5">
+<div class="container mt-3">
   <div class="row">
     <div class ="col-sm-12 col-md-6">
-      <%= image_tag(@product.photo_url, width:'100%') %>  
-    </div>
+      <%= image_tag(@product.photo_url, width:'80%') %>  
     <div class="col-sm-12 col-md-6">
       <h1><%= @product.name %></h1>
       <p>Some awesome description of our amazing teddy.</p>
@@ -10,6 +9,7 @@
       <p>Some awesome description of our amazing teddy.</p>
       <p>Amount: <%= humanized_money_with_symbol(@product.price) %></p>
       <p>$$$</p>
+    </div>
     </div>
   </div>
 </div>
