@@ -2,6 +2,24 @@ puts 'cleaning database...'
 Product.destroy_all if Rails.env.development?
 Category.destroy_all if Rails.env.development?
 
+puts "Creating 2 new users"
+
+chuck = User.new( email:"godlike@gmail.com", password: "iamsecurity")
+if chuck.save
+  print '.'
+else
+  chuck = User.where(email:"godlike@gmail.com").first
+  print '_'
+end
+
+jc = User.new(email:"lovemanu@gmail.com", password: "manuforever")
+if jc.save
+  print '.'
+else
+  jc = User.where(email:"lovemanu@gmail.com").first
+  print '_'
+end
+
 puts'Creating categories...'
 nano = Category.create!(name: 'nano')
 console = Category.create!(name: 'console')
